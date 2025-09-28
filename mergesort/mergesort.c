@@ -5,11 +5,11 @@ static void merge(int values[], int left, int mid, int right){
 	int node1 = mid - left + 1;
 	int node2 = right - mid;
 	
-	int* L = malloc (void*) (node1 * sizeof(int));
-	int* R = malloc (void*) (node2 * sizeof(int));
+	int* L =(int*) malloc(node1 * sizeof(int));
+	int* R =(int*) malloc(node2 * sizeof(int));
 
 	for (int i = 0; i < node1; i++) {
-		L[i] = values[left + 1];
+		L[i] = values[left + i];
 	}
 
 	for (int j = 0; j < node2; j++) {
@@ -32,6 +32,9 @@ static void merge(int values[], int left, int mid, int right){
 	while (j < node2) {
 		values[k++] = R[j++];
 	}
+
+	free(L);
+	free(R);
 	
 
 }
