@@ -9,7 +9,7 @@ int* array_merge(int num_arrays, int* sizes, int** values) {
  }
 
 
- int* merged_array = (int*) malloc (total_size * sizeof(int));   //allocating memory for final array                                                                                                
+ int* merged_array = (int*) malloc ((total_size + 1)* sizeof(int));   //allocating memory for final array                                                                                                
 
 
  int mergedIndex = 0;   //index in merged_array                                                                                                                                                     
