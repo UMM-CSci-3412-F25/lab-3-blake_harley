@@ -89,7 +89,6 @@ TEST(ArrayMerge, Handle_different_sizes) {
     for (j=0; j<i; ++j) {
       a[i][j] = j;
     }
-    free(a[i]);
   }
 
   result = array_merge(num_arrays, sizes, a);
@@ -111,7 +110,6 @@ TEST(ArrayMerge, Handle_different_sizes_reversed) {
     for (j=0; j<i; ++j) {
       a[i][j] = j;
     }
-    free(a[i]);
   }
 
   result = array_merge(num_arrays, sizes, a);
